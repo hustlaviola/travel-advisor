@@ -11,7 +11,8 @@
     ],
     "prettier/prettier": "error",
     "max-len": ["error", 80],
-    "react/prefer-stateless-function": 0
+    "react/prefer-stateless-function": 0,
+    "react/state-in-constructor": [2, "never"]
   },
   "env": {
     "browser": true,

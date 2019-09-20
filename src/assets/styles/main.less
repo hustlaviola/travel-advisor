@@ -1,0 +1,67 @@
+@white: #fff;
+@font1: Arial, Helvetica, sans-serif;
+@font2: 'Courier New', Courier, monospace;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	line-height: 1.7;
+	font-size: 1.5em;
+	font-family: @font1;
+}
+
+.container {
+	display: grid;
+	padding: 5px;
+	height: 100vh;
+	color: @white;
+	background: linear-gradient(to right bottom, rgba(3, 14, 2, 0.548), rgba(11, 14, 2, 0.908)), url('../img/travel.jpg') no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
+.gtc {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: repeat(2, 1fr);
+	align-content: center;
+}
+
+.gtc-children {
+	padding: 30px;
+}
+
+h1 {
+	font-family: @font2;
+}
+
+h2 {
+	font-family: @font2;
+}
+
+select {
+	padding: 5px;
+	margin-bottom: 20px;
+	font-size: 18px;
+	line-height: 1;
+	border: 0;
+	height: 40px;
+	&:focus {
+		outline: none;
+	}
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 1.8em;
+  }
+
+	.gtc {
+		grid-template-columns: unset;
+		grid-auto-rows: minmax(min-content, max-content);
+	}
+}
